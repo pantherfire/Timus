@@ -8,7 +8,7 @@ def get_pixes_dicts(blk_pixes_nums):
     min_x = None
     lowest_y = None
 
-    for i in range(0,blk_pixes_nums):
+    for i  in range(0,blk_pixes_nums):
     
         pix = input().split()
         x_value = int(pix[0])
