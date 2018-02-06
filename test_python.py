@@ -3,6 +3,7 @@ Created on Feb 5, 2018
 
 @author: root
 '''
+import math
 
 def calc():
     a = 1
@@ -17,7 +18,3 @@ i,j = calc()
 print(str(i) + " "+ str(j))
 
 
-a = abs(-1)
-b= None
-
-print( a)
