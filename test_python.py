@@ -16,5 +16,8 @@ if "a" in dictaa:
 i,j = calc()
 print(str(i) + " "+ str(j))
 
-lista = [1,2,3]
-del(lista) = 0
+
+a = abs(-1)
+b= None
+
+print( a)
