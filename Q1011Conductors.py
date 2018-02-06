@@ -22,8 +22,7 @@ def get_pq():
     return p_percent,q_percent
 '''
 def get_pq():
-    p_percent = None
-    q_percent = None
+
     line_without_space = input()
     if  " " in line_without_space:
         p_raw = line_without_space.split()[0]
@@ -34,8 +33,6 @@ def get_pq():
     p_percent = float(p_raw)/100 +0.000000000001    #key
     q_percent = float(q_raw)/100 -0.000000000001
     return p_percent,q_percent
-    
-
     
 
 
