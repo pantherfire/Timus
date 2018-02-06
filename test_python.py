@@ -18,3 +18,6 @@ i,j = calc()
 print(str(i) + " "+ str(j))
 
 
+a = 31
+b = math.floor(a)
+print(b)

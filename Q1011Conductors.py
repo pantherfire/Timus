@@ -31,8 +31,8 @@ def get_pq():
     else:
         p_raw = line_without_space
         q_raw = input()
-    p_percent = round(float(p_raw),2)/100   
-    q_percent = round(float(q_raw),2)/100 
+    p_percent = float(p_raw)/100 +0.000000000001    #key
+    q_percent = float(q_raw)/100 -0.000000000001
     return p_percent,q_percent
     
 
@@ -47,15 +47,15 @@ def print_conductors_num(p_percent, q_percent):
         upper_bound = n/p_percent
         
         if floor(upper_bound) == upper_bound and ceil(lower_bound) == lower_bound :    #both upper_bound & lower_bound are int
-            if  upper_bound - lower_bound >= 2:
+            if  floor(upper_bound) - ceil(lower_bound) >= 2:
                 m = ceil(lower_bound) + 1
                 break
         elif floor(upper_bound) == upper_bound:  #only upper_bound is int
-            if  upper_bound - lower_bound > 1:
+            if  floor(upper_bound) - lower_bound > 1:
                 m = ceil(lower_bound) 
                 break
         elif ceil(lower_bound) == lower_bound:   #only lower_bound is int
-            if  upper_bound - lower_bound > 1:
+            if  upper_bound - ceil(lower_bound) > 1:
                 m = ceil(lower_bound) + 1
                 break
         else:
