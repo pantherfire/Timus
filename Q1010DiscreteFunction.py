@@ -4,6 +4,11 @@ Created on Feb 6, 2018
 @author: root
 '''
 
+'''
+the key point of this quesiton is that the result must be 2 continous numbers
+'''
+
+
 def get_point_dicts(points_num):
     points_dicts = {}
     for i in range(1,points_num + 1):
