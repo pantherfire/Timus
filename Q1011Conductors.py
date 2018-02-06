@@ -48,7 +48,7 @@ def print_conductors_num(p_percent, q_percent):
         
         if floor(upper_bound) == upper_bound and ceil(lower_bound) == lower_bound :    #both upper_bound & lower_bound are int
             if  upper_bound - lower_bound >= 2:
-                m = lower_bound + 1
+                m = ceil(lower_bound) + 1
                 break
         elif floor(upper_bound) == upper_bound:  #only upper_bound is int
             if  upper_bound - lower_bound > 1:
@@ -56,7 +56,7 @@ def print_conductors_num(p_percent, q_percent):
                 break
         elif ceil(lower_bound) == lower_bound:   #only lower_bound is int
             if  upper_bound - lower_bound > 1:
-                m = lower_bound + 1
+                m = ceil(lower_bound) + 1
                 break
         else:
             if floor(upper_bound) - ceil(lower_bound) >= 0:  #both upper_bound & lower_bound are not int
