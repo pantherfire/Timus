@@ -58,8 +58,8 @@ if __name__ == '__main__':
         if remainder:
             matrix_product = matrix_multiply_2_2 ( matrix_product,matrix_dicts[current_position],m )
             
-        #print(matrix_dicts)    
-        #print(matrix_product)
+        print(matrix_dicts)    
+        print(matrix_product)
     result = (matrix_product[0][0] * (k - 1) + matrix_product[0][1] * 1) % m
     print( result )
 
