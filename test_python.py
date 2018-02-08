@@ -21,3 +21,5 @@ print(str(i) + " "+ str(j))
 a = 31
 b = math.floor(a)
 print(b)
+
+print (1000000000000000000* 1000000000000000000)
