@@ -21,5 +21,6 @@ print(str(i) + " "+ str(j))
 a = 31
 b = math.floor(a)
 print(b)
-
-print (pow(10,18) )
+stra = bin(pow(10,18))
+print (bin(pow(10,18)-1) )
+print(stra[1])
