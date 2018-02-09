@@ -41,27 +41,33 @@ if __name__ == '__main__':
     k = int(input())
     m = int(input())
     
-    matrix_dicts = {}
-    matrix_product = [[1,0],[0,1]]
+    if n >= 2 and n <= pow(10,18) and m >= 2 and m <= pow(10,18) and k >= 2 and k <= pow(10,18):
     
-    num = n - 1
-    current_position = 0 #current position of the n (binary notation)
-    while num:
-        remainder  = num % 2
-        num = (num - remainder) / 2
-        current_position += 1
-        if current_position == 1:
-            matrix_dicts[1] = [[k-1,k-1],[1,0]]
-        else:
-            matrix_dicts[current_position] = matrix_multiply_2_2 ( matrix_dicts[current_position-1],matrix_dicts[current_position-1],m )
-            
-        if remainder:
-            matrix_product = matrix_multiply_2_2 ( matrix_product,matrix_dicts[current_position],m )
-            
-        print(matrix_dicts)    
-        print(matrix_product)
-    result = (matrix_product[0][0] * (k - 1) + matrix_product[0][1] * 1) % m
-    print( result )
+        matrix_dicts = {}
+        matrix_product = [[1,0],[0,1]]
+        
+        num = n - 1
+        current_position = 0 #current position of the n (binary notation)
+        while num:
+            remainder  = num % 2
+            num = (num - remainder) / 2
+            current_position += 1
+            if current_position == 1:
+                matrix_dicts[1] = [[k-1,k-1],[1,0]]
+            else:
+                matrix_dicts[current_position] = matrix_multiply_2_2 ( matrix_dicts[current_position-1],matrix_dicts[current_position-1],m )
+                
+            if remainder:
+                matrix_product = matrix_multiply_2_2 ( matrix_dicts[current_position],matrix_product,m )
+                
+            print(matrix_dicts)    
+            print(matrix_product)
+        
+        f0 = 1
+        f1 = k - 1
+        
+        fn = (matrix_product[0][0] * f1 + matrix_product[0][1] * f0) % m
+        print( fn )
 
         
         
