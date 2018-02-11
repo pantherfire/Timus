@@ -50,7 +50,7 @@ if __name__ == '__main__':
         current_position = 0 #current position of the n (binary notation)
         while num:
             remainder  = num % 2
-            num = (num - remainder) / 2
+            num = (num - remainder) // 2
             current_position += 1
             if current_position == 1:
                 matrix_dicts[1] = [[k-1,k-1],[1,0]]
@@ -60,8 +60,8 @@ if __name__ == '__main__':
             if remainder:
                 matrix_product = matrix_multiply_2_2 ( matrix_dicts[current_position],matrix_product,m )
                 
-            print(matrix_dicts)    
-            print(matrix_product)
+            #print(matrix_dicts)    
+            #print(matrix_product)
         
         f0 = 1
         f1 = k - 1
