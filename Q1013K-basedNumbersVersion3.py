@@ -9,11 +9,6 @@ import math
 S(n+2) = (k-1)( S(n+1) + S(n) )
 '''
 
-'''
-|F_{n+1} F_n|  |k-1 1|^n  |k-1 1|
-|           | =|     |  x |     |
-|F_n F_{n-1}|  |k-1 0|    |1   0|
-'''
 
 '''
 |F_n    |   |k-1 k-1|^(n-1)   |F1|
@@ -22,6 +17,8 @@ S(n+2) = (k-1)( S(n+1) + S(n) )
 
 F1 = k-1
 F0 = 1
+
+the question is converting into anther question: F_n = a * F1 + b * F0
 
 '''
 
@@ -50,7 +47,7 @@ if __name__ == '__main__':
         current_position = 0 #current position of the n (binary notation)
         while num:
             remainder  = num % 2
-            num = (num - remainder) // 2
+            num = (num - remainder) // 2  #PAY ATTENTION!!!  must use // other than /, otherwise will get wrong for big number eg. 36028797018963966/2
             current_position += 1
             if current_position == 1:
                 matrix_dicts[1] = [[k-1,k-1],[1,0]]
