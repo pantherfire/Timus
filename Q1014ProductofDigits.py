@@ -6,8 +6,15 @@ Created on Feb 11, 2018
 
 import math
 
-def generate_prime_lists(sqrt_n):
+def generate_prime_lists(n):
+    
     primes = []
+    
+    if n == 1:
+        return primes
+    elif n == 2:
+        primes = [2]
+        return primes
 
 if __name__ == '__main__':
     n = int(input())
