@@ -26,3 +26,8 @@ print (bin(pow(10,18)-1) )
 print(stra[1])
 
 print(3//2)
+
+dicta = {}
+dicta[1] = {1:1}
+dicta[1][2] = 0
+print(dicta)
