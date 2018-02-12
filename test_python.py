@@ -24,3 +24,5 @@ print(b)
 stra = bin(pow(10,18))
 print (bin(pow(10,18)-1) )
 print(stra[1])
+
+print(3//2)
